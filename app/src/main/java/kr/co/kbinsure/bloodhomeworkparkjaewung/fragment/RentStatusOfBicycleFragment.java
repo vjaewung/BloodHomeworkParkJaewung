@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -27,9 +28,9 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class CongestionOfBeachFragment extends Fragment {
+public class RentStatusOfBicycleFragment extends Fragment {
 
-    RecyclerView    beachRV;
+    RecyclerView    bicyclRV;
     ViewGroup       rootView;
     Context         thisContext;
     BeachRecyclerViewAdapter beachRecyclerViewAdapter;
@@ -37,22 +38,22 @@ public class CongestionOfBeachFragment extends Fragment {
     RecyclerView    recyclerView; // = rootView.findViewById(R.id.beachRV);
     List<BeachDataObject>     beachList0 = new ArrayList<>();
 
-    public static CongestionOfBeachFragment newInstance() {
-        CongestionOfBeachFragment fragment = new CongestionOfBeachFragment();
+    public static RentStatusOfBicycleFragment newInstance() {
+        RentStatusOfBicycleFragment fragment = new RentStatusOfBicycleFragment();
         return fragment;
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        rootView = (ViewGroup)inflater.inflate(R.layout.activity_fragment3, container, false);
+        rootView = (ViewGroup)inflater.inflate(R.layout.activity_fragment5, container, false);
 
         thisContext = container.getContext();
-        beachRV     = rootView.findViewById(R.id.bicycleRV);
-        beachRV.setLayoutManager(new LinearLayoutManager(thisContext));
+        bicyclRV     = rootView.findViewById(R.id.bicycleRV);
+        bicyclRV.setLayoutManager(new LinearLayoutManager(thisContext));
         beachRecyclerViewAdapter = new BeachRecyclerViewAdapter(beachList0, (Activity) thisContext);
 
-        beachRV.setAdapter(beachRecyclerViewAdapter);
+        bicyclRV.setAdapter(beachRecyclerViewAdapter);
 //      beachRV.setAdapter(beachAdapter);
 
         return rootView;
@@ -100,10 +101,10 @@ public class CongestionOfBeachFragment extends Fragment {
     }
     private void displayBeach(List<BeachDataObject> lists){
         LinearLayoutManager manager = new LinearLayoutManager(thisContext);
-        beachRV.setLayoutManager(manager);
-        beachRV.addItemDecoration(new DividerItemDecoration(thisContext, DividerItemDecoration.VERTICAL));
+        bicyclRV.setLayoutManager(manager);
+        bicyclRV.addItemDecoration(new DividerItemDecoration(thisContext, DividerItemDecoration.VERTICAL));
         BeachRecyclerViewAdapter beachAdapter = new BeachRecyclerViewAdapter(lists, (Activity) thisContext);
-        beachRV.setAdapter(beachAdapter);
+        bicyclRV.setAdapter(beachAdapter);
     }
 
 

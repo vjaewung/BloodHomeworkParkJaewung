@@ -13,6 +13,10 @@
         android:icon="@android:drawable/ic_menu_camera"
         android:title="@string/payment" />
     <item
+        android:id="@+id/callItem2"
+        android:icon="@android:drawable/ic_menu_call"
+        android:title="@string/productInformation2" />
+    <item
         android:id="@+id/callItem"
         android:icon="@android:drawable/ic_menu_call"
         android:title="@string/productInformation" />

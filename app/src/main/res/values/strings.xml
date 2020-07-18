@@ -8,6 +8,7 @@
     <string name="balance">세부요청</string>
     <string name="changeProduct">요청목록</string>
     <string name="payment">혼잡도</string>
+    <string name="productInformation2">대여현황</string>
     <string name="productInformation">나의위치</string>
     <string name="changeInfo">정보수정</string>
     <string name="applyIrp">IRP가입신청</string>

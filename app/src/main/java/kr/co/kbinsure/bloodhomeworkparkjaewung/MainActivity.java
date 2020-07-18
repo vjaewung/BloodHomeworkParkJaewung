@@ -52,11 +52,17 @@ public class MainActivity extends AppCompatActivity {
                         ft3.replace(R.id.fragmentContainer, CongestionOfBeachFragment.newInstance());
                         ft3.commit();
                         break;
+                    case R.id.callItem2:
+                        FragmentTransaction ft5= getSupportFragmentManager().beginTransaction();
+                        ft5.replace(R.id.fragmentContainer, CongestionOfBeachFragment.newInstance());
+                        ft5.commit();
+                        break;
                     case R.id.callItem:
                         FragmentTransaction ft4 = getSupportFragmentManager().beginTransaction();
                         ft4.replace(R.id.fragmentContainer, LocationOfMapFragment.newInstance());
                         ft4.commit();
                         break;
+
                     default:
                         throw new IllegalStateException("Execption :" + item.getItemId());
                 }

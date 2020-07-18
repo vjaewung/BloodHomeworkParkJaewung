@@ -16,7 +16,6 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-import kr.co.kbinsure.bloodhomeworkparkjaewung.common.OkhttpRetrofitBuilderManager;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -32,14 +31,14 @@ public class BeachInfoRequestActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_beach_congestion_info);
-        beachRV = findViewById(R.id.beachRV);
+        beachRV = findViewById(R.id.bicycleRV);
         progressBar = findViewById(R.id.progress);
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        OpenAPIBeachInterface service = OkhttpRetrofitBuilderManager.getTrafficOpenAPIService();
+        OpenAPIBeachInterface service = BeachOkhttpRetrofitBuilderManager.getTrafficOpenAPIService();
         //Call<ResponseBody> call = service.trafficOpenAPIService(serviceKey);
         Call<ResponseBody> call = service.beachCongestion();
         progressBar.setVisibility(View.VISIBLE);

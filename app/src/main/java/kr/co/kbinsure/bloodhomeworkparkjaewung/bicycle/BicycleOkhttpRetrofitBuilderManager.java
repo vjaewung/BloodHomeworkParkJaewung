@@ -1,4 +1,4 @@
-package kr.co.kbinsure.bloodhomeworkparkjaewung.common;
+package kr.co.kbinsure.bloodhomeworkparkjaewung.bicycle;
 
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 
@@ -8,9 +8,9 @@ import kr.co.kbinsure.bloodhomeworkparkjaewung.beach.OpenAPIBeachInterface;
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 
-public class OkhttpRetrofitBuilderManager {
+public class BicycleOkhttpRetrofitBuilderManager {
 
-    private static String TARGET_ADDRESS = "https://seantour.com/";
+    private static String TARGET_ADDRESS = "http://openapi.seoul.go.kr:8088/";
 
     private static Retrofit.Builder retrofitBuilder =
             new Retrofit.Builder()
@@ -26,8 +26,8 @@ public class OkhttpRetrofitBuilderManager {
                 .readTimeout(10, TimeUnit.SECONDS).build();
         retrofitBuilder.client(okHttpClient);
     }
-    public static OpenAPIBeachInterface getTrafficOpenAPIService(){
-        return  retrofitBuilder.build().create(OpenAPIBeachInterface.class);
+    public static OpenAPIBicycleInterface getBicycleOpenAPIService(){
+        return  retrofitBuilder.build().create(OpenAPIBicycleInterface.class);
     }
 }
 

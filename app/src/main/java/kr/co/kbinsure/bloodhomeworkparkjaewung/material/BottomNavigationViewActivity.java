@@ -63,15 +63,5 @@ public class BottomNavigationViewActivity extends AppCompatActivity {
             fragment.setArguments(bundle);
             return fragment;
         }
-        @Nullable
-        @Override
-        public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
-                                 @Nullable Bundle savedInstanceState) {
-            View root = inflater.inflate(R.layout.bottom_fragment, container, false);
-            TextView titleTV = root.findViewById(R.id.contentTitle);
-            String paramValue = getArguments().getString("title");
-            titleTV.setText(paramValue);
-            return root;
-        }
     }
 }

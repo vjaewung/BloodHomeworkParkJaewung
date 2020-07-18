@@ -4,17 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="8dp"
-    tools:context=".beach.BeachInfoRequestActivity">
+    android:layout_margin="8dp">
+
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="전국 해수욕장 혼잡도"
-        android:textColor="@android:color/black"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
+        android:text="서울 자전거대여 현황"
+        android:textColor="@android:color/black"
         android:textSize="20sp"
         android:textStyle="bold" />
     <androidx.recyclerview.widget.RecyclerView

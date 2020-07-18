@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/basic_margin"
+    android:padding="@dimen/basic_padding">
+    <TextView
+        android:id="@+id/stationId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:textSize="14sp"
+        tools:text="1" />
+
+    <TextView
+        android:id="@+id/stationName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/stationId"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:text="02. 망원역 1번출구 앞" />
+
+    <TextView
+        android:id="@+id/stationLatitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/stationName"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:text="ST-4" />
+    <TextView
+        android:id="@+id/stationLongitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/stationLatitude"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:text="ST-4" />
+    <Button
+        android:id="@+id/parkingBikeTotCnt"
+        android:layout_width="150dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="@dimen/basic_padding"
+        android:layout_below="@id/stationLongitude"
+        android:background="@android:color/holo_green_dark"
+        android:textColor="@color/colorPrimaryDark"
+        android:text="어서와라"
+        />
+</RelativeLayout>
