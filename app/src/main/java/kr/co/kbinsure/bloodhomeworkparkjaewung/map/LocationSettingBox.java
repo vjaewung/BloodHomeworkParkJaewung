@@ -1,4 +1,4 @@
-package kr.co.kbinsure.bloodhomeworkparkjaewung;
+package kr.co.kbinsure.bloodhomeworkparkjaewung.map;
 
 import android.app.Dialog;
 import android.content.DialogInterface;

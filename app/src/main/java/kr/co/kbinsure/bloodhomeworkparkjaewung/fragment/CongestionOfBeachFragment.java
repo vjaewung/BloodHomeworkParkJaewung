@@ -18,10 +18,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import kr.co.kbinsure.bloodhomeworkparkjaewung.R;
-import kr.co.kbinsure.bloodhomeworkparkjaewung.beach.Beach;
+import kr.co.kbinsure.bloodhomeworkparkjaewung.beach.BeachDataObject;
 import kr.co.kbinsure.bloodhomeworkparkjaewung.beach.BeachRecyclerViewAdapter;
-import kr.co.kbinsure.bloodhomeworkparkjaewung.beach.DataOpenTrafficAPIService;
-import kr.co.kbinsure.bloodhomeworkparkjaewung.beach.OkHTTPTrafficIManager;
+import kr.co.kbinsure.bloodhomeworkparkjaewung.beach.OpenAPIBeachInterface;
+import kr.co.kbinsure.bloodhomeworkparkjaewung.common.OkhttpRetrofitBuilderManager;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -35,7 +35,7 @@ public class CongestionOfBeachFragment extends Fragment {
     BeachRecyclerViewAdapter beachRecyclerViewAdapter;
 
     RecyclerView    recyclerView; // = rootView.findViewById(R.id.beachRV);
-    List<Beach>     beachList0 = new ArrayList<>();
+    List<BeachDataObject>     beachList0 = new ArrayList<>();
 
     public static CongestionOfBeachFragment newInstance() {
         CongestionOfBeachFragment fragment = new CongestionOfBeachFragment();
@@ -64,7 +64,7 @@ public class CongestionOfBeachFragment extends Fragment {
 
         super.onResume();
 
-        DataOpenTrafficAPIService service = OkHTTPTrafficIManager.getTrafficOpenAPIService();
+        OpenAPIBeachInterface service = OkhttpRetrofitBuilderManager.getTrafficOpenAPIService();
         Log.e("service : ", String.valueOf(service));
         Call<ResponseBody> call = service.beachCongestion();
         Log.e("service : ", String.valueOf(call));
@@ -76,11 +76,11 @@ public class CongestionOfBeachFragment extends Fragment {
                 try {
                     JSONObject jsonBeach = new JSONObject(response.body().string());
                     int beachSize = 50;
-                    List<Beach> beachList = new ArrayList<>();
+                    List<BeachDataObject> beachList = new ArrayList<>();
                     Log.e("onResponse", String.valueOf(beachList));
 
                     for( int i = 0 ; i < beachSize ; i++){
-                        Beach beach = new Beach();
+                        BeachDataObject beach = new BeachDataObject();
                         JSONObject jsonObject = jsonBeach.getJSONObject("Beach" + i);
                         beach.etlDt = jsonObject.getString("etlDt");
                         beach.seqId = jsonObject.getInt("seqId");
@@ -98,7 +98,7 @@ public class CongestionOfBeachFragment extends Fragment {
             }
         });
     }
-    private void displayBeach(List<Beach> lists){
+    private void displayBeach(List<BeachDataObject> lists){
         LinearLayoutManager manager = new LinearLayoutManager(thisContext);
         beachRV.setLayoutManager(manager);
         beachRV.addItemDecoration(new DividerItemDecoration(thisContext, DividerItemDecoration.VERTICAL));

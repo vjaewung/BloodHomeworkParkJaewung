@@ -1,6 +1,6 @@
 package kr.co.kbinsure.bloodhomeworkparkjaewung.beach;
 
-public class Beach {
+public class BeachDataObject {
     public String etlDt;
     public int seqId;
     public String poiNm;

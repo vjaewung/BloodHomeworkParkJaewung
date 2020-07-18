@@ -7,7 +7,7 @@ import java.util.Random;
 
 import kr.co.kbinsure.bloodhomeworkparkjaewung.R;
 
-public class GirlGroupRandomInit {
+public class RandomInitialzation {
 
     private static Random random = new Random(System.currentTimeMillis());
     private static HashMap<Integer, String> girlGenerationMaps;

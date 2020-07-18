@@ -3,11 +3,12 @@
     <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">
             AIzaSyCIQs7w74rNJCuqdWThJ9o9-R6gUtWWaQw
     </string>
+
     <string name="sk_api_key">l7xx4b6806149e7c43fc907158c904107001</string>
     <string name="balance">세부요청</string>
     <string name="changeProduct">요청목록</string>
-    <string name="payment">요청사항</string>
-    <string name="productInformation">설정</string>
+    <string name="payment">혼잡도</string>
+    <string name="productInformation">나의위치</string>
     <string name="changeInfo">정보수정</string>
     <string name="applyIrp">IRP가입신청</string>
     <string name="openDrawer">open</string>
@@ -23,6 +24,7 @@
     <string name="hint_10">긴급연락처</string>
     <string name="button_login">로그인</string>
     <string name="button_cancel">취소</string>
+
     <string name="content_description">소녀시대 완전체 사진입니다</string>
     <string name="title">Girls Generation</string>
     <string name="sub_title">Girls Generation Members</string>
@@ -37,64 +39,14 @@
     <string name="settings">환경설정</string>
     <string name="help">도움말</string>
     <string name="closeDrawer">close</string>
-    <string name="girl_generation_title">
-         소녀시대는 SM 엔터테인먼트 소속의 대한민국 8인조 걸 그룹이다.
-         태연, 써니, 티파니, 효연, 유리, 수영, 윤아, 서현 8명으로 이루어져 있다.
-       소녀시대라는 이름은 소녀들이 평정할 시대가 왔다는 의미를 갖고 있다.
-       소녀시대는 2007년 8월 2일 데뷔 싱글 〈다시 만난 세계〉를 발매하고
-         8월 5일 SBS를 통해 정식 데뷔했다
-     </string>
-    <string name="girls_generation_result">
-        소녀시대는 여러 대중 매체에서 대한민국 최고의 걸 그룹으로 불리고 있다.
-        문화평론가 하재근은 아이돌의 아이콘에서 시대의 아이콘이 된 것이다
-        소녀시대는 한국 대중문화를 상징하는 아이콘으로 격상되었다.
-        소녀시대를 빼놓고는 2009년, 2010년 한국 사회를 말할 수 없다고 말했다
-    </string>
-    <string name="girls_generation_sta">
-        소녀시대는 어려서부터 음악 춤 외국어 등을 기획사에서 체계적으로 훈련시켜 온 걸그룹이었다.
-        또한 소녀시대는 귀여운 이미지를 내세우는 일본 아이돌과 달리, 강렬한 이미지와 가창력 춤 실력을
-        내세워 아이돌의 새 개념을 만들었다고 한다.
-        태연은 한국에선 소녀시대가 친근한 이미지였는데 일본에선 동경한다는 반응이 많았어요
-        라고 말하기도 했다.
-    </string>
-    <string-array name="rank">
-        <item>이사</item>
-        <item>부장</item>
-        <item>과장</item>
-        <item>대리</item>
-        <item>사원</item>
-    </string-array>
-    <string-array name="list_entries">
-        <item>소녀시대</item>
-        <item>트와이스</item>
-        <item>모모랜드</item>
-    </string-array>
-    <string-array name="list_values">
-        <item>girls</item>
-        <item>twice</item>
-        <item>momo</item>
-    </string-array>
     <string name="messages_header">기본설정</string>
     <string name="notify_header">알림설정</string>
     <string name="congestion">현재 혼잡도</string>
-    <string name="very_good">아주좋음</string>
-    <string name="crowded_side">붐비는편</string>
-    <string name="very_complex">아주복잡</string>
+    <string name="very_good">쾌적</string>
+    <string name="crowded_side">보통</string>
+    <string name="very_complex">복잡</string>
     <string name="current_beach_status">현재 전국 해수욕장 혼잡도</string>
 
-    <!-- Messages Preferences -->
-    <string name="nick_name">닉네임</string>
-    <string name="list_title">기본 아이템 선정</string>
-
-    <!-- Sync Preferences -->
-    <string name="notify_title">이메일 받기</string>
-    <string name="attachment_title">첨부파일 자동 다운로드</string>
-    <string name="attachment_summary_on">이메일 첨부파일 자동 다운로드 ON</string>
-    <string name="attachment_summary_off">이메일 첨부파일 자동 다운로드 OFF</string>
-    <string name="transitionIVName">tranMemberIV</string>
-    <string name="transitionTVName">tranMemberTV</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 

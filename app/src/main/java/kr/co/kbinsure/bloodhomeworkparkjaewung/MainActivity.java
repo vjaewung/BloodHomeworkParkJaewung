@@ -21,13 +21,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_search_for_information_restricted_traffic);
-        setContentView(R.layout.activity_navigation_view_drawer);
-
-        //Toolbar toolbar = findViewById(R.id.toolbar);
-        //setSupportActionBar(toolbar);
-        //getSupportActionBar().setDisplayShowTitleEnabled(true);
-        //getSupportActionBar().setTitle("Blood Mngt");
+        setContentView(R.layout.activity_main_view_drawer);
 
         drawerLayout = findViewById(R.id.drawer_layout);
 
@@ -36,13 +30,7 @@ public class MainActivity extends AppCompatActivity {
             transaction.add(R.id.fragmentContainer, DetailRequestFragment.newInstance());
             transaction.commit();
         }
-
-//        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-//                this, drawerLayout, toolbar, R.string.openDrawer, R.string.closeDrawer);
-//        toggle.syncState();
-
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigation);
-
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
 
             @Override

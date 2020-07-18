@@ -1,4 +1,4 @@
-package kr.co.kbinsure.bloodhomeworkparkjaewung;
+package kr.co.kbinsure.bloodhomeworkparkjaewung.map;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
@@ -37,7 +37,6 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 
 import kr.co.kbinsure.bloodhomeworkparkjaewung.R;
-import kr.co.kbinsure.bloodhomeworkparkjaewung.RuntimePermissionCheckUtil;
 
 public class CurrentLocationActivity extends AppCompatActivity {
     /*

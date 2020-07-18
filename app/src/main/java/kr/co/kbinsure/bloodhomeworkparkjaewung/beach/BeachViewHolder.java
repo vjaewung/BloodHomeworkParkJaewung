@@ -11,10 +11,12 @@ import kr.co.kbinsure.bloodhomeworkparkjaewung.R;
 
 
 public class BeachViewHolder extends RecyclerView.ViewHolder {
+
     TextView seqId;
     TextView beachName;
     TextView uniqPop;
     Button   congestion;
+
     public BeachViewHolder(@NonNull View itemView) {
         super(itemView);
         seqId = itemView.findViewById(R.id.seqId);

@@ -19,10 +19,10 @@ import java.util.Random;
 
 public class BeachRecyclerViewAdapter extends RecyclerView.Adapter<BeachViewHolder> {
 
-    private List<Beach> lists;
+    private List<BeachDataObject> lists;
     private Activity owner;
 
-    public BeachRecyclerViewAdapter(List<Beach> lists, Activity owner) {
+    public BeachRecyclerViewAdapter(List<BeachDataObject> lists, Activity owner) {
         this.lists = lists;
         this.owner = owner;
     }
@@ -36,7 +36,7 @@ public class BeachRecyclerViewAdapter extends RecyclerView.Adapter<BeachViewHold
     }
     @Override
     public void onBindViewHolder(@NonNull BeachViewHolder holder, int position) {
-        Beach beach = lists.get(position);
+        BeachDataObject beach = lists.get(position);
         holder.beachName.setText(String.format("[ %s ]", beach.poiNm));
         holder.beachName.setPaintFlags(holder.beachName.getPaintFlags()| Paint.UNDERLINE_TEXT_FLAG);
         holder.beachName.setOnClickListener( bName ->{

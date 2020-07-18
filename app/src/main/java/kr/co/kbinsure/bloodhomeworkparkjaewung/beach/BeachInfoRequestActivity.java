@@ -16,20 +16,22 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
+import kr.co.kbinsure.bloodhomeworkparkjaewung.common.OkhttpRetrofitBuilderManager;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class SearchForInformationRestrictedTrafficActivity extends AppCompatActivity {
+public class BeachInfoRequestActivity extends AppCompatActivity {
 
     String serviceKey = "TqG1MG9kgKm%2F8l7szzKNMW9mckCDAqAViWng8owRIqGGm%2FU9p0FY9Z0%2Fjt8i25B2KV%2F7uEQaQ3%2Bss3PirivjwQ%3D%3D";
     RecyclerView beachRV;
     ProgressBar progressBar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_search_for_information_restricted_traffic);
+        setContentView(R.layout.activity_beach_congestion_info);
         beachRV = findViewById(R.id.beachRV);
         progressBar = findViewById(R.id.progress);
     }
@@ -37,7 +39,7 @@ public class SearchForInformationRestrictedTrafficActivity extends AppCompatActi
     @Override
     protected void onResume() {
         super.onResume();
-        DataOpenTrafficAPIService service = OkHTTPTrafficIManager.getTrafficOpenAPIService();
+        OpenAPIBeachInterface service = OkhttpRetrofitBuilderManager.getTrafficOpenAPIService();
         //Call<ResponseBody> call = service.trafficOpenAPIService(serviceKey);
         Call<ResponseBody> call = service.beachCongestion();
         progressBar.setVisibility(View.VISIBLE);
@@ -51,9 +53,9 @@ public class SearchForInformationRestrictedTrafficActivity extends AppCompatActi
                 try {
                     JSONObject jsonBeach = new JSONObject(response.body().string());
                     int beachSize = 50;
-                    List<Beach>  beachList = new ArrayList<>();
+                    List<BeachDataObject>  beachList = new ArrayList<>();
                     for( int i = 0 ; i < beachSize ; i++){
-                        Beach beach = new Beach();
+                        BeachDataObject beach = new BeachDataObject();
                         JSONObject jsonObject = jsonBeach.getJSONObject("Beach" + i);
                         beach.etlDt = jsonObject.getString("etlDt");
                         beach.seqId = jsonObject.getInt("seqId");
@@ -72,7 +74,7 @@ public class SearchForInformationRestrictedTrafficActivity extends AppCompatActi
             }
         });
     }
-    private void displayBeach(List<Beach> lists){
+    private void displayBeach(List<BeachDataObject> lists){
         LinearLayoutManager manager = new LinearLayoutManager(this);
         beachRV.setLayoutManager(manager);
         beachRV.addItemDecoration(new DividerItemDecoration(this,DividerItemDecoration.VERTICAL));

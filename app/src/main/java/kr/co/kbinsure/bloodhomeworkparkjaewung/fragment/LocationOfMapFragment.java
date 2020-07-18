@@ -13,8 +13,8 @@ import android.view.ViewGroup;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
-import kr.co.kbinsure.bloodhomeworkparkjaewung.CurrentLocationActivity;
-import kr.co.kbinsure.bloodhomeworkparkjaewung.LocationSettingBox;
+import kr.co.kbinsure.bloodhomeworkparkjaewung.map.CurrentLocationActivity;
+import kr.co.kbinsure.bloodhomeworkparkjaewung.map.LocationSettingBox;
 import kr.co.kbinsure.bloodhomeworkparkjaewung.R;
 
 /**

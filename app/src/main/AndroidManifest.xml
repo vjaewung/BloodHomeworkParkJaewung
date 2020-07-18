@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name="kr.co.kbinsure.bloodhomeworkparkjaewung.CurrentLocationActivity"/>
+        <activity android:name="kr.co.kbinsure.bloodhomeworkparkjaewung.map.CurrentLocationActivity"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

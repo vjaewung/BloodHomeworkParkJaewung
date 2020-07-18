@@ -1,16 +1,16 @@
-package kr.co.kbinsure.bloodhomeworkparkjaewung.remainder;
+package kr.co.kbinsure.bloodhomeworkparkjaewung.difflist;
 
 import androidx.recyclerview.widget.DiffUtil;
 
 import java.util.List;
 
-public class DiffUtilGirlGroupCallback extends DiffUtil.Callback {
+public class DiffUtilCallback extends DiffUtil.Callback {
 
     private List<Integer> oldGirlGroupList;
     private List<Integer> newGirlGroupList;
 
-    public DiffUtilGirlGroupCallback(List<Integer> oldGirlGroupList,
-                                     List<Integer> newGirlGroupList) {
+    public DiffUtilCallback(List<Integer> oldGirlGroupList,
+                            List<Integer> newGirlGroupList) {
         this.oldGirlGroupList = oldGirlGroupList;
         this.newGirlGroupList = newGirlGroupList;
     }

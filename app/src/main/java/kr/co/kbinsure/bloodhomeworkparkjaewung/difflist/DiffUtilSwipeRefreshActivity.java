@@ -1,4 +1,4 @@
-package kr.co.kbinsure.bloodhomeworkparkjaewung.remainder;
+package kr.co.kbinsure.bloodhomeworkparkjaewung.difflist;
 
 import android.os.Bundle;
 
@@ -10,22 +10,22 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import java.util.Random;
 import kr.co.kbinsure.bloodhomeworkparkjaewung.R;
-import kr.co.kbinsure.bloodhomeworkparkjaewung.common.GirlGroupRandomInit;
+import kr.co.kbinsure.bloodhomeworkparkjaewung.common.RandomInitialzation;
 
-public class DiffUtilAndSwipeRefreshActivity extends AppCompatActivity {
+public class DiffUtilSwipeRefreshActivity extends AppCompatActivity {
     SwipeRefreshLayout swipeRefresh;
     RecyclerView recyclerView;
 
-    GirlGroupRecyclerAdapter adapter;
+    DiffRecyclerAdapter adapter;
     private final Random random = new Random(System.currentTimeMillis());
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_diff_util_and_swipe_refresh);
+        setContentView(R.layout.activity_diff_swipe_refresh);
 
         swipeRefresh = findViewById(R.id.swipeRefresh);
         recyclerView = findViewById(R.id.diffRecyclerView);
 
-        adapter =  new GirlGroupRecyclerAdapter(GirlGroupRandomInit.shuffleGirlsGeneration(), "twice");
+        adapter =  new DiffRecyclerAdapter(RandomInitialzation.shuffleGirlsGeneration(), "twice");
         LinearLayoutManager manager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(manager);
         recyclerView.addItemDecoration(new DividerItemDecoration(this,LinearLayoutManager.VERTICAL));
@@ -36,7 +36,7 @@ public class DiffUtilAndSwipeRefreshActivity extends AppCompatActivity {
             public void run() {
 
                 adapter.setGroupName("generations");
-                adapter.applyUpdateGirlGroupList(GirlGroupRandomInit.shuffleGirlsGeneration());
+                adapter.applyUpdateGirlGroupList(RandomInitialzation.shuffleGirlsGeneration());
 
                 runOnUiThread(new Runnable(){
                     @Override

@@ -1,7 +1,8 @@
-package kr.co.kbinsure.bloodhomeworkparkjaewung.androidMaterialWidget;
+package kr.co.kbinsure.bloodhomeworkparkjaewung.material;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -12,64 +13,54 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-
 import kr.co.kbinsure.bloodhomeworkparkjaewung.R;
-import com.google.android.material.badge.BadgeDrawable;
-import com.google.android.material.tabs.TabLayout;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class TabLayoutBasicActivity extends AppCompatActivity {
 
-    private BadgeDrawable badge;
-    private int badgeCount = 0;
+public class BottomNavigationViewActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tab_layout_basic);
-        TabLayout tabLayout = findViewById(R.id.tabLayout);
-        badge = tabLayout.getTabAt(0).getOrCreateBadge();
-        badge.setVisible(true);
-        badge.setNumber(badgeCount);
+        setContentView(R.layout.activity_bottom_navigation_view);
 
-        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+        if (savedInstanceState == null) {
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            transaction.add(R.id.fragmentContainer, BottomFragment.newInstance("상품검색"));
+            transaction.commit();
+        }
+        BottomNavigationView navigationView = findViewById(R.id.bottomNavigation);
+        navigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
-            public void onTabSelected(TabLayout.Tab tab) {
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
                 String param = "";
-                switch (tab.getPosition()) {
-                    case 0:
-                        param = "상품검색";
-                        badge.setNumber(++badgeCount);
+                switch (item.getItemId()) {
+                    case R.id.searchItem:
                         break;
-                    case 1:
-                        param = "카메라";
+                    case R.id.cameraItem:
                         break;
-                    case 2:
-                        param = "이용안내";
+                    case R.id.callItem:
                         break;
                     default:
-                        throw new IllegalStateException("Unexpected value: " + tab.getPosition());
+                        throw new IllegalStateException("Unexpected value: " + item.getItemId());
                 }
                 FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-                ft.replace(R.id.tabContent, FragmentContent.newInstance(param));
+                ft.replace(R.id.fragmentContainer, BottomFragment.newInstance(param));
                 ft.commit();
+                return true;
             }
-            @Override
-            public void onTabUnselected(TabLayout.Tab tab) { }
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) { }
         });
     }
-
-    public static class FragmentContent extends Fragment {
+    public static class BottomFragment extends Fragment {
 
         public static Fragment newInstance(String param) {
-            Fragment fragment = new TabLayoutBasicActivity.FragmentContent();
+            Fragment fragment = new BottomFragment();
             Bundle bundle = new Bundle();
             bundle.putString("title", param);
             fragment.setArguments(bundle);
             return fragment;
         }
-
         @Nullable
         @Override
         public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
