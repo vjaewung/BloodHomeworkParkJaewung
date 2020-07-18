@@ -77,6 +77,7 @@
     <string name="messages_header">기본설정</string>
     <string name="notify_header">알림설정</string>
 
+
     <!-- Messages Preferences -->
     <string name="nick_name">닉네임</string>
     <string name="list_title">기본 아이템 선정</string>
