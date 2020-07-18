@@ -17,10 +17,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import kr.co.kbinsure.bloodhomeworkparkjaewung.R;
-import kr.co.kbinsure.bloodhomeworkparkjaewung.beach.BeachDataObject;
-import kr.co.kbinsure.bloodhomeworkparkjaewung.beach.BeachRecyclerViewAdapter;
-import kr.co.kbinsure.bloodhomeworkparkjaewung.beach.OpenAPIBeachInterface;
-import kr.co.kbinsure.bloodhomeworkparkjaewung.beach.BeachOkhttpRetrofitBuilderManager;
+import kr.co.kbinsure.bloodhomeworkparkjaewung.bicycle.BicycleDataObject;
+import kr.co.kbinsure.bloodhomeworkparkjaewung.bicycle.BicycleRecyclerViewAdapter;
+import kr.co.kbinsure.bloodhomeworkparkjaewung.bicycle.BicycleRecyclerViewAdapter;
+import kr.co.kbinsure.bloodhomeworkparkjaewung.bicycle.OpenAPIBicycleInterface;
+import kr.co.kbinsure.bloodhomeworkparkjaewung.bicycle.BicycleOkhttpRetrofitBuilderManager;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;

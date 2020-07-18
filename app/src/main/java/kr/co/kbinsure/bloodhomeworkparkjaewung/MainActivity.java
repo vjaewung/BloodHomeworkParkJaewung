@@ -12,6 +12,7 @@ import kr.co.kbinsure.bloodhomeworkparkjaewung.fragment.DetailRequestFragment;
 import kr.co.kbinsure.bloodhomeworkparkjaewung.fragment.ListOfRequestFragment;
 import kr.co.kbinsure.bloodhomeworkparkjaewung.fragment.CongestionOfBeachFragment;
 import kr.co.kbinsure.bloodhomeworkparkjaewung.fragment.LocationOfMapFragment;
+import kr.co.kbinsure.bloodhomeworkparkjaewung.fragment.RentStatusOfBicycleFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -54,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case R.id.callItem2:
                         FragmentTransaction ft5= getSupportFragmentManager().beginTransaction();
-                        ft5.replace(R.id.fragmentContainer, CongestionOfBeachFragment.newInstance());
+                        ft5.replace(R.id.fragmentContainer, RentStatusOfBicycleFragment.newInstance());
                         ft5.commit();
                         break;
                     case R.id.callItem:

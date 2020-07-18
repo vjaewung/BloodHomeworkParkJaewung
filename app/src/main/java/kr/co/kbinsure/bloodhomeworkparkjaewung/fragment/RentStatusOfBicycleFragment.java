@@ -23,6 +23,8 @@ import kr.co.kbinsure.bloodhomeworkparkjaewung.beach.BeachDataObject;
 import kr.co.kbinsure.bloodhomeworkparkjaewung.beach.BeachRecyclerViewAdapter;
 import kr.co.kbinsure.bloodhomeworkparkjaewung.beach.OpenAPIBeachInterface;
 import kr.co.kbinsure.bloodhomeworkparkjaewung.beach.BeachOkhttpRetrofitBuilderManager;
+import kr.co.kbinsure.bloodhomeworkparkjaewung.bicycle.BicycleDataObject;
+import kr.co.kbinsure.bloodhomeworkparkjaewung.bicycle.BicycleRecyclerViewAdapter;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -30,13 +32,13 @@ import retrofit2.Response;
 
 public class RentStatusOfBicycleFragment extends Fragment {
 
-    RecyclerView    bicyclRV;
+    RecyclerView    bicycleRV;
     ViewGroup       rootView;
     Context         thisContext;
-    BeachRecyclerViewAdapter beachRecyclerViewAdapter;
+    BicycleRecyclerViewAdapter bicycleRecyclerViewAdapter;
 
     RecyclerView    recyclerView; // = rootView.findViewById(R.id.beachRV);
-    List<BeachDataObject>     beachList0 = new ArrayList<>();
+    List<BicycleDataObject>     bicycleList0 = new ArrayList<>();
 
     public static RentStatusOfBicycleFragment newInstance() {
         RentStatusOfBicycleFragment fragment = new RentStatusOfBicycleFragment();
@@ -49,12 +51,12 @@ public class RentStatusOfBicycleFragment extends Fragment {
         rootView = (ViewGroup)inflater.inflate(R.layout.activity_fragment5, container, false);
 
         thisContext = container.getContext();
-        bicyclRV     = rootView.findViewById(R.id.bicycleRV);
-        bicyclRV.setLayoutManager(new LinearLayoutManager(thisContext));
-        beachRecyclerViewAdapter = new BeachRecyclerViewAdapter(beachList0, (Activity) thisContext);
+        bicycleRV     = rootView.findViewById(R.id.bicycleRV);
+        bicycleRV.setLayoutManager(new LinearLayoutManager(thisContext));
+        bicycleRecyclerViewAdapter = new BicycleRecyclerViewAdapter(bicycleList0, (Activity) thisContext);
 
-        bicyclRV.setAdapter(beachRecyclerViewAdapter);
-//      beachRV.setAdapter(beachAdapter);
+        bicycleRV.setAdapter(bicycleRecyclerViewAdapter);
+//      bicycleRV.setAdapter(bicycleAdapter);
 
         return rootView;
 
@@ -66,31 +68,31 @@ public class RentStatusOfBicycleFragment extends Fragment {
         super.onResume();
 
         OpenAPIBeachInterface service = BeachOkhttpRetrofitBuilderManager.getTrafficOpenAPIService();
-        Log.e("service : ", String.valueOf(service));
+        Log.e("service :------> ", String.valueOf(service));
         Call<ResponseBody> call = service.beachCongestion();
-        Log.e("service : ", String.valueOf(call));
+        Log.e("service :------> ", String.valueOf(call));
 
         call.enqueue(new Callback<ResponseBody>() {
 
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                 try {
-                    JSONObject jsonBeach = new JSONObject(response.body().string());
-                    int beachSize = 50;
-                    List<BeachDataObject> beachList = new ArrayList<>();
-                    Log.e("onResponse", String.valueOf(beachList));
+                    JSONObject jsonBicycle = new JSONObject(response.body().string());
+                    int bicycleSize = 50;
+                    List<BicycleDataObject> bicycleList = new ArrayList<>();
+                    Log.e("onResponse", String.valueOf(bicycleList));
 
-                    for( int i = 0 ; i < beachSize ; i++){
-                        BeachDataObject beach = new BeachDataObject();
-                        JSONObject jsonObject = jsonBeach.getJSONObject("Beach" + i);
-                        beach.etlDt = jsonObject.getString("etlDt");
-                        beach.seqId = jsonObject.getInt("seqId");
-                        beach.poiNm = jsonObject.getString("poiNm");
-                        beach.uniqPop = jsonObject.getInt("uniqPop");
-                        beach.congestion = jsonObject.getString("congestion");
-                        beachList.add(beach);
+                    for( int i = 0 ; i < bicycleSize ; i++){
+                        BicycleDataObject bicycle = new BicycleDataObject();
+                        JSONObject jsonObject = jsonBicycle.getJSONObject("row" + i);
+                        bicycle.stationId = jsonObject.getString("stationId");
+                        bicycle.stationName = jsonObject.getString("stationName");
+                        bicycle.stationLatitude = jsonObject.getString("stationLatitude");
+                        bicycle.stationLongitude = jsonObject.getString("stationLongitude");
+                        bicycle.parkingBikeTotCnt = jsonObject.getInt("parkingBikeTotCnt");
+                        bicycleList.add(bicycle);
                     }
-                    displayBeach(beachList);
+                    displayBeach(bicycleList);
                 }catch (Exception e){}
             }
             @Override
@@ -99,12 +101,12 @@ public class RentStatusOfBicycleFragment extends Fragment {
             }
         });
     }
-    private void displayBeach(List<BeachDataObject> lists){
+    private void displayBeach(List<BicycleDataObject> lists){
         LinearLayoutManager manager = new LinearLayoutManager(thisContext);
-        bicyclRV.setLayoutManager(manager);
-        bicyclRV.addItemDecoration(new DividerItemDecoration(thisContext, DividerItemDecoration.VERTICAL));
-        BeachRecyclerViewAdapter beachAdapter = new BeachRecyclerViewAdapter(lists, (Activity) thisContext);
-        bicyclRV.setAdapter(beachAdapter);
+        bicycleRV.setLayoutManager(manager);
+        bicycleRV.addItemDecoration(new DividerItemDecoration(thisContext, DividerItemDecoration.VERTICAL));
+        BicycleRecyclerViewAdapter beachAdapter = new BicycleRecyclerViewAdapter(lists, (Activity) thisContext);
+        bicycleRV.setAdapter(beachAdapter);
     }
 
 

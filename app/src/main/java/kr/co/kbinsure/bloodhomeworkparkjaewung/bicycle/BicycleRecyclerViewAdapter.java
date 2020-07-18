@@ -12,14 +12,14 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.List;
-import java.util.Random;
-
 import kr.co.kbinsure.bloodhomeworkparkjaewung.R;
 import kr.co.kbinsure.bloodhomeworkparkjaewung.bicycle.BicycleDataObject;
 import kr.co.kbinsure.bloodhomeworkparkjaewung.bicycle.BicycleViewHolder;
 
+import java.util.List;
+
 public class BicycleRecyclerViewAdapter extends RecyclerView.Adapter<BicycleViewHolder> {
+
 
     private List<BicycleDataObject> lists;
     private Activity owner;
@@ -28,6 +28,11 @@ public class BicycleRecyclerViewAdapter extends RecyclerView.Adapter<BicycleView
         this.lists = lists;
         this.owner = owner;
     }
+
+
+
+
+
 
     @NonNull
     @Override
@@ -38,7 +43,8 @@ public class BicycleRecyclerViewAdapter extends RecyclerView.Adapter<BicycleView
     @Override
     public void onBindViewHolder(@NonNull BicycleViewHolder holder, int position) {
         BicycleDataObject bicycle = lists.get(position);
-        holder.stationId.setText(String.format("[ %s ]", bicycle.stationId));
+
+//        holder.stationId.setText(String.format("[ %s ]", bicycle.stationId));
 //        holder.stationName.setPaintFlags(holder.bicycle.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
     };
 
