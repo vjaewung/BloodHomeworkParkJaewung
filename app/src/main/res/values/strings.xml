@@ -74,7 +74,6 @@
         <item>twice</item>
         <item>momo</item>
     </string-array>
-    <!-- Preference Titles -->
     <string name="messages_header">기본설정</string>
     <string name="notify_header">알림설정</string>
 
