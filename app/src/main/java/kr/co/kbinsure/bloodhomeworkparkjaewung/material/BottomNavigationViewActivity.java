@@ -40,6 +40,8 @@ public class BottomNavigationViewActivity extends AppCompatActivity {
                         break;
                     case R.id.cameraItem:
                         break;
+                    case R.id.cameraItem1:
+                        break;
                     case R.id.callItem:
                         break;
                     default:
