@@ -18,16 +18,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 import kr.co.kbinsure.bloodhomeworkparkjaewung.R;
-import kr.co.kbinsure.bloodhomeworkparkjaewung.pojo.Beach;
-import kr.co.kbinsure.bloodhomeworkparkjaewung.traffic.BeachRecyclerViewAdapter;
-import kr.co.kbinsure.bloodhomeworkparkjaewung.traffic.DataOpenTrafficAPIService;
-import kr.co.kbinsure.bloodhomeworkparkjaewung.traffic.OkHTTPTrafficIManager;
+import kr.co.kbinsure.bloodhomeworkparkjaewung.beach.Beach;
+import kr.co.kbinsure.bloodhomeworkparkjaewung.beach.BeachRecyclerViewAdapter;
+import kr.co.kbinsure.bloodhomeworkparkjaewung.beach.DataOpenTrafficAPIService;
+import kr.co.kbinsure.bloodhomeworkparkjaewung.beach.OkHTTPTrafficIManager;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class RequestInfoFragment extends Fragment {
+public class CongestionOfBeachFragment extends Fragment {
 
     RecyclerView    beachRV;
     ViewGroup       rootView;
@@ -37,8 +37,8 @@ public class RequestInfoFragment extends Fragment {
     RecyclerView    recyclerView; // = rootView.findViewById(R.id.beachRV);
     List<Beach>     beachList0 = new ArrayList<>();
 
-    public static RequestInfoFragment newInstance() {
-        RequestInfoFragment fragment = new RequestInfoFragment();
+    public static CongestionOfBeachFragment newInstance() {
+        CongestionOfBeachFragment fragment = new CongestionOfBeachFragment();
         return fragment;
     }
 

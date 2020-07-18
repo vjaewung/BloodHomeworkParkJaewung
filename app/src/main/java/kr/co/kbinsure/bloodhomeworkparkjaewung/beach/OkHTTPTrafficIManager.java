@@ -1,9 +1,10 @@
-package kr.co.kbinsure.bloodhomeworkparkjaewung.traffic;
+package kr.co.kbinsure.bloodhomeworkparkjaewung.beach;
 
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 
 import java.util.concurrent.TimeUnit;
 
+import kr.co.kbinsure.bloodhomeworkparkjaewung.beach.DataOpenTrafficAPIService;
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 

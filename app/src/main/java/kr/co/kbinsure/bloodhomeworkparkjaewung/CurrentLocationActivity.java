@@ -1,4 +1,4 @@
-package kr.co.kbinsure.bloodhomeworkparkjaewung.fragment;
+package kr.co.kbinsure.bloodhomeworkparkjaewung;
 
 import android.Manifest;
 import android.annotation.SuppressLint;

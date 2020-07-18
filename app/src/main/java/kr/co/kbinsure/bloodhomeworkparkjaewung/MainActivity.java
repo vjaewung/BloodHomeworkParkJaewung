@@ -1,9 +1,7 @@
 package kr.co.kbinsure.bloodhomeworkparkjaewung;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentTransaction;
@@ -12,8 +10,8 @@ import android.view.MenuItem;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import kr.co.kbinsure.bloodhomeworkparkjaewung.fragment.DetailRequestFragment;
 import kr.co.kbinsure.bloodhomeworkparkjaewung.fragment.ListOfRequestFragment;
-import kr.co.kbinsure.bloodhomeworkparkjaewung.fragment.RequestInfoFragment;
-import kr.co.kbinsure.bloodhomeworkparkjaewung.fragment.SettingRequestFragment;
+import kr.co.kbinsure.bloodhomeworkparkjaewung.fragment.CongestionOfBeachFragment;
+import kr.co.kbinsure.bloodhomeworkparkjaewung.fragment.LocationOfMapFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -63,12 +61,12 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case R.id.cameraItem1:
                         FragmentTransaction ft3 = getSupportFragmentManager().beginTransaction();
-                        ft3.replace(R.id.fragmentContainer, RequestInfoFragment.newInstance());
+                        ft3.replace(R.id.fragmentContainer, CongestionOfBeachFragment.newInstance());
                         ft3.commit();
                         break;
                     case R.id.callItem:
                         FragmentTransaction ft4 = getSupportFragmentManager().beginTransaction();
-                        ft4.replace(R.id.fragmentContainer, SettingRequestFragment.newInstance());
+                        ft4.replace(R.id.fragmentContainer, LocationOfMapFragment.newInstance());
                         ft4.commit();
                         break;
                     default:

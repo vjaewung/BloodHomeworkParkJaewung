@@ -1,4 +1,4 @@
-package kr.co.kbinsure.bloodhomeworkparkjaewung.traffic;
+package kr.co.kbinsure.bloodhomeworkparkjaewung.beach;
 
 import okhttp3.ResponseBody;
 import retrofit2.Call;

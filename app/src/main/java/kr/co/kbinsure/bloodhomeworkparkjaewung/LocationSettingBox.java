@@ -13,15 +13,6 @@ public class LocationSettingBox extends DialogFragment {
 
     public Dialog onCreateDialog(Bundle savedInstanceState)  {
 
-        /*return  AlertDialog.Builder(getActivity())
-                .setMessage("단말기 위치설정이 필요합니다.")
-                .setPositiveButton("확인", { _ , _ ->
-                *//*
-                 * 사용자 단말기에 위치설정이 되어있지않으면
-                 * 위치설정으로 이동한 후 앱을 진행한다
-                 *//*
-
-        }.create();*/
         return new AlertDialog.Builder(getContext())
                 .setMessage("단말기의 위치설정이 필요합니다")
                 .setPositiveButton("확인", new DialogInterface.OnClickListener() {

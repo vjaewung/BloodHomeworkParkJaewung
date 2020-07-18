@@ -1,4 +1,4 @@
-package kr.co.kbinsure.bloodhomeworkparkjaewung.pojo;
+package kr.co.kbinsure.bloodhomeworkparkjaewung.beach;
 
 public class Beach {
     public String etlDt;

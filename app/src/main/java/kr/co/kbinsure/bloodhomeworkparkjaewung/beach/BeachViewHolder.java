@@ -1,4 +1,4 @@
-package kr.co.kbinsure.bloodhomeworkparkjaewung.traffic;
+package kr.co.kbinsure.bloodhomeworkparkjaewung.beach;
 
 import android.view.View;
 import android.widget.Button;

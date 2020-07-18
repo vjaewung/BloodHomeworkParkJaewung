@@ -1,4 +1,4 @@
-package kr.co.kbinsure.bloodhomeworkparkjaewung.traffic;
+package kr.co.kbinsure.bloodhomeworkparkjaewung.beach;
 
 import android.os.Bundle;
 import android.view.View;
@@ -10,7 +10,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import kr.co.kbinsure.bloodhomeworkparkjaewung.R;
-import kr.co.kbinsure.bloodhomeworkparkjaewung.pojo.Beach;
 
 import org.json.JSONObject;
 
