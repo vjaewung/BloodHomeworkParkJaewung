@@ -78,7 +78,11 @@ public class RentStatusOfBicycleFragment extends Fragment {
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                 try {
                     JSONObject jsonBicycle = new JSONObject(response.body().string());
-                    int bicycleSize = 50;
+                    Log.e("response.body", response.body().string());
+
+                    Log.e("onResponse", String.valueOf(jsonBicycle));
+
+                    int bicycleSize = 10;
                     List<BicycleDataObject> bicycleList = new ArrayList<>();
                     Log.e("onResponse", String.valueOf(bicycleList));
 
