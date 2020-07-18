@@ -1,0 +1,45 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="Theme.KBTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!-- <item name="windowActionBar">false</item>
+         <item name="windowNoTitle">true</item>-->
+    </style>
+    <style name="KBOutlinedButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="strokeWidth">2dp</item>
+        <item name="strokeColor">@color/colorPrimary</item>
+    </style>
+    <style name="KBTransitionTheme" parent="Theme.KBTheme">
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowEnterTransition">@transition/explode</item>
+        <item name="android:windowExitTransition">@transition/explode</item>
+        <item name="android:windowSharedElementEnterTransition">@transition/move_girl_image</item>
+        <item name="android:windowSharedElementExitTransition">@transition/move_girl_image</item>
+    </style>
+    <style name="KBCardViewContent" parent="android:Widget">
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingTop">24dp</item>
+        <item name="android:paddingBottom">24dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+    <style name="GirlGroupTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">#EC407A</item>
+        <item name="colorPrimaryDark">#E91E63</item>
+        <item name="colorAccent">#FF4081</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowEnterTransition">@transition/explode</item>
+        <item name="android:windowExitTransition">@transition/explode</item>
+        <item name="android:windowSharedElementEnterTransition">@transition/move_girl_image</item>
+        <item name="android:windowSharedElementExitTransition">@transition/move_girl_image</item>
+    </style>
+</resources>

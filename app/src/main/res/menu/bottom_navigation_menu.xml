@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item
+    android:id="@+id/searchItem"
+    android:icon="@android:drawable/ic_menu_search"
+    android:title="세부요청" />
+<item
+    android:id="@+id/cameraItem"
+    android:icon="@android:drawable/ic_menu_camera"
+    android:title="요청목록" />
+<item
+    android:id="@+id/callItem"
+    android:icon="@android:drawable/ic_menu_call"
+    android:title="요청사항" />
+</menu>

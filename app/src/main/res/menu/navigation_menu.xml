@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/balance"
+            android:icon="@drawable/ic_baseline_account_balance_wallet_24"
+            android:title="@string/balance"
+            />
+        <item
+            android:id="@+id/changeProduct"
+            android:icon="@drawable/ic_baseline_change_history_24"
+            android:title="@string/changeProduct"
+            />
+        <item
+            android:id="@+id/payment"
+            android:icon="@drawable/ic_baseline_payment_24"
+            android:title="@string/payment"
+            />
+        <item
+            android:id="@+id/productInformation"
+            android:icon="@drawable/ic_baseline_credit_card_24"
+            android:title="@string/productInformation"
+            />
+    </group>
+    <!--item android:title="@string/etc">
+        <menu>
+            <item
+                android:icon="@drawable/ic_baseline_settings_24"
+                android:title="@string/settings" />
+            <item
+                android:icon="@android:drawable/ic_menu_help"
+                android:title="@string/help" />
+        </menu>
+    </item-->
+</menu>

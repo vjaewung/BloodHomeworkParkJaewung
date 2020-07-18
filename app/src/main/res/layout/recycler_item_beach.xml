@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/basic_margin"
+    android:padding="@dimen/basic_padding">
+    <TextView
+        android:id="@+id/seqId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:textSize="14sp"
+        tools:text="1" />
+    <TextView
+        android:id="@+id/beachName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/seqId"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        tools:text="해운대 해수욕장"
+        />
+    <TextView
+        android:id="@+id/uniqPop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/beachName"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:text="2345" />
+    <Button
+        android:id="@+id/congestion"
+        android:layout_width="150dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="@dimen/basic_padding"
+        android:layout_below="@id/uniqPop"
+        android:background="@android:color/holo_green_dark"
+        android:textColor="@color/colorPrimaryDark"
+        android:text="어서와라"
+        />
+</RelativeLayout>
